@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Wear - Premium Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="logo">Men's Wear</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <div class="cart-container">
+                <span class="cart-icon" id="cart-btn">🛒 Cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-up">
+            <div class="hero-content fade-up">
+                <h1>Premium Men's Fashion</h1>
+                <p>Style that defines you</p>
+                <a href="#products" class="cta-btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-strip">
+        <div>Free shipping on orders over ₹999</div>
+        <div>7‑day easy returns</div>
+        <div>Secure payments</div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Featured Collection</h2>
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="shirts">Shirts</button>
+            <button class="filter-btn" data-category="jeans">Jeans</button>
+            <button class="filter-btn" data-category="jackets">Jackets</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+        </div>
+        <div class="product-grid" id="product-grid">
+            <!-- Products JS se load honge -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Premium quality men's fashion at affordable prices. We bring style that stands the test of time.</p>
+        <p>Trusted by thousands in Pimpri-Chinchwad and beyond. Your satisfaction is our priority.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Pimpri-Chinchwad, Maharashtra | Phone: +91-XXXXXXXXXX | Email: info@menswear.in</p>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cart-total">0</span></strong>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel (Secret) -->
+    <div class="admin-modal" id="admin-panel" style="display: none;">
+        <div class="admin-content">
+            <span class="close">×</span>
+            <h2>Add Product</h2>
+            <form id="admin-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="number" id="product-price" placeholder="Price" required>
+                <select id="product-category">
+                    <option value="shirts">Shirts</option>
+                    <option value="jeans">Jeans</option>
+                    <option value="jackets">Jackets</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+                <input type="file" id="product-image" accept="image/*">
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-msg" id="success-msg">Added to Cart!</div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Men's Wear. Pimpri-Chinchwad, Maharashtra. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script><button id="open-admin"
+        style="position:fixed;bottom:10px;right:10px;opacity:0;pointer-events:auto;">Admin</button>
+
+
+
+</body>
+
+</html>
